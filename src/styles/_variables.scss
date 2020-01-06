@@ -1,0 +1,9 @@
+$gridSize: 32;
+
+//just used for generating classes for max inv/stash/cube sizes.
+$minGridWidth: 1;
+$maxGridWidth: 20;
+
+:root {
+    --grid-size: #{$gridSize};
+}

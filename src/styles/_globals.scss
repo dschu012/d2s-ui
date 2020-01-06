@@ -1,0 +1,247 @@
+@import "@/styles/_variables.scss";
+
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+
+.grid {
+    position: relative;
+    background: url('~@/assets/inv_grid.png');
+    background-repeat: repeat;
+    margin: 1em auto;   
+}
+
+.inventory {
+    position: relative;
+    margin: 1em auto;
+    width: #{$gridSize * 10}px;
+    height: #{$gridSize * 7}px;
+}
+
+.head {
+    position: absolute;
+    background: url('~@/assets/inv_helm_glove__0__1.png');
+    background-size: contain;
+    top: 0;
+    left: #{($gridSize * 5) - ($gridSize)}px;
+    width: #{$gridSize * 2}px;
+    height: #{$gridSize * 2}px;
+}
+
+.neck {
+    position: absolute;
+    background: url('~@/assets/inv_ring_amulet__0__0.png');
+    background-size: contain;
+    top: #{($gridSize * .25)}px;
+    left: #{($gridSize * 5) + ($gridSize * 1.25)}px;
+    width: #{$gridSize * 1}px;
+    height: #{$gridSize * 1}px;
+}
+
+.torso {
+    position: absolute;
+    background: url('~@/assets/inv_armor.png');
+    background-size: contain;
+    top: #{$gridSize * 2}px;
+    left: #{($gridSize * 5) - ($gridSize)}px;
+    width: #{$gridSize * 2}px;
+    height: #{$gridSize * 3}px;
+}
+
+.weapon {
+    background: url('~@/assets/inv_weapons.png');
+    background-size: contain;
+    width: #{$gridSize * 2}px;
+    height: #{$gridSize * 4}px;
+}
+
+.right-hand, .alt-right-hand {
+    top: #{$gridSize * 1.25}px;
+    left: #{($gridSize * 5) - ($gridSize * 4.5)}px;
+    position: absolute;
+}
+
+.left-hand, .alt-left-hand {
+    top: #{$gridSize * 1.25}px;
+    left: #{($gridSize * 5) + ($gridSize * 2.5)}px;
+    position: absolute;
+}
+
+.ring {
+    background: url('~@/assets/inv_ring_amulet__0__0.png');
+    background-size: contain;
+    width: #{$gridSize * 1}px;
+    height: #{$gridSize * 1}px;
+}
+
+.right-finger {
+    position: absolute;
+    top: #{$gridSize * 5.25}px;
+    left: #{($gridSize * 5) - ($gridSize * 2.25)}px;
+}
+
+.left-finger {
+    position: absolute;
+    top: #{$gridSize * 5.25}px;
+    left: #{($gridSize * 5) + ($gridSize * 1.25)}px;
+}
+
+.waist {
+    position: absolute;
+    background: url('~@/assets/inv_belt.png');
+    background-size: contain;
+    top: #{$gridSize * 5.25}px;
+    left: #{($gridSize * 5) - ($gridSize)}px;
+    width: #{$gridSize * 2}px;
+    height: #{$gridSize * 1}px;
+}
+
+.feet {
+    position: absolute;
+    background: url('~@/assets/inv_boots.png');
+    background-size: contain;
+    top: #{$gridSize * 5.25}px;
+    left: #{($gridSize * 5) + ($gridSize * 2.5)}px;
+    width: #{$gridSize * 2}px;
+    height: #{$gridSize * 2}px;
+}
+
+.hands {
+    position: absolute;
+    background: url('~@/assets/inv_helm_glove__0__0.png');
+    background-size: contain;
+    top: #{$gridSize * 5.25}px;
+    left: #{($gridSize * 5) - ($gridSize * 4.5)}px;
+    width: #{$gridSize * 2}px;
+    height: #{$gridSize * 2}px;
+}
+
+.right-tab {
+    top: #{$gridSize * .75}px;
+    left: #{($gridSize * 5) - ($gridSize * 4.5)}px;
+    position: absolute;
+}
+
+.left-tab {
+    top: #{$gridSize * .75}px;
+    left: #{($gridSize * 5) + ($gridSize * 2.5)}px;
+    position: absolute;
+}
+
+.tab {
+    padding: 10px;
+}
+
+.inventory .item {
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position: absolute;
+    background: rgba(0, 0, 45, 0.5);
+}
+
+.ethereal {
+    opacity: 0.5;
+}
+
+
+.item img, .socket img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.empty-socket {
+    background: url('~@/assets/gemsocket.png');
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.socket {
+    position: absolute;
+    min-width: #{$gridSize}px;
+    min-height: #{$gridSize}px;
+    z-index: 999;
+}
+
+.tippy-tooltip {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.dgrey {
+    color: rgb(105, 105, 105);
+}
+
+.red {
+    color: rgb(255, 77, 77);
+}
+
+.green {
+    color: rgb(0, 255, 0);
+}
+
+.blue {
+    color: rgb(105, 105, 255);
+}
+
+.gold {
+    color: rgb(199,179,119);
+}
+
+.grey {
+    color: rgb(105, 105, 105);
+}
+
+.black {
+    color: rgb(0, 0, 0);
+}
+
+.orange {
+    color: rgb(255, 168, 0);
+}
+
+.yellow {
+    color: rgb(255, 255, 100);
+}
+
+.white {
+    color: rgb(255, 255, 255);
+}
+
+@mixin grid-size-list {
+    @for $i from $minGridWidth through $maxGridWidth {
+        .x-#{$i} {
+            left: #{$gridSize * $i}px;
+        }
+        .y-#{$i} {
+            top: #{$gridSize * $i}px;
+        }
+        .w-#{$i} {
+            width: #{$gridSize * $i}px;
+        }
+        .h-#{$i} {
+            height: #{$gridSize * $i}px;
+        }
+    }
+}
+
+@include grid-size-list;
