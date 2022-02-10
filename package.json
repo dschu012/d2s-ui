@@ -38,7 +38,7 @@
     "ts-node-dev": "^1.0.0-pre.44",
     "webpack-cli": "3.3.10",
     "concurrently": "5.0.0",
-    "node-sass": "4.13.0",
+    "node-sass": "7.0.0",
     "sass-loader": "8.0.0"
   }
 }
